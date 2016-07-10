@@ -58,6 +58,7 @@ public class SimplePlaygroundTest {
         assertEquals(playground.doStep(1, 1), State.PLAY);
         assertEquals(playground.doStep(2, 1), State.PLAY);
         assertEquals(playground.doStep(2, 2), State.DRAW);
+        System.out.println(playground.print());
     }
 
     @Test

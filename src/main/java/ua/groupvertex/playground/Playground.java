@@ -5,6 +5,7 @@ public interface Playground {
 
     State doStep(int i, int j);
 
+    String print();
 
 
 }
