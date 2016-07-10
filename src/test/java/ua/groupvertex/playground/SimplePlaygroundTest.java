@@ -11,7 +11,7 @@ public class SimplePlaygroundTest {
 
     @BeforeClass
     public static void initGame() {
-        playground = new SimplePlayground();
+        playground = new SimplePlayGround();
     }
 
     @Before

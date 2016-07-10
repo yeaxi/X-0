@@ -1,6 +1,6 @@
 package ua.groupvertex.playground;
 
-public class SimplePlayground implements Playground {
+public class SimplePlayGround implements Playground {
     private Board board;
     private Seed currentPlayer = Seed.CROSS;
 
