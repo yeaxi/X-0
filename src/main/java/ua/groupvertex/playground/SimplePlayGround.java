@@ -1,12 +1,36 @@
 package ua.groupvertex.playground;
 
-public class SimplePlayground implements Playground {
+public class SimplePlayGround implements Playground {
     private Board board;
     private Seed currentPlayer = Seed.CROSS;
 
     public void start() {
         board = new Board();
         currentPlayer = Seed.CROSS;
+    }
+
+
+
+    public String print(){
+        StringBuilder sb = new StringBuilder();
+        for (int row = 0; row < board.ROWS; ++row) {
+            for (int col = 0; col < board.COLS; ++col) {
+                sb.append(" ");
+                switch (board.cells[row][col].content) {
+                    case CROSS:  sb.append(" X "); break;
+                    case NOUGHT: sb.append(" O "); break;
+                    case EMPTY:  sb.append("   "); break;
+                }
+
+                if (col < board.COLS - 1) sb.append("|");
+            }
+            sb.append("\n");
+            if (row < board.ROWS - 1) {
+                sb.append("-----------");
+                sb.append("\n");
+            }
+        }
+        return sb.toString();
     }
 
     public State doStep(int i, int j) {
